@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #e9e4e0;
+}
+
+.container {
+    max-width: 500px;
+    padding: 0 15px;
+    margin: 50px auto;
+}
+
+.to-do-list {
+    background-color: #f5f5f5;
+    width: 500px;
+
+}
+
+.to-do-list>.list-title {
+    border-bottom: 2px solid #efedf2;
+    padding: 20px 0;
+}
+
+.to-do-list>.list-title>.wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.to-do-list>.list-title>.wrapper>.list-date {
+    color: #b8b2e2;
+    position: relative;
+    font-size: 36px;
+}
+
+.to-do-list>.list-title>.wrapper>.list-date::after {
+    content: 'st';
+    font-size: 20px;
+    color: #b8b2e2;
+    position: absolute;
+    top: 0px;
+    right: -14px;
+}
+
+.to-do-list>.list-title>.wrapper>.task-count {
+    color: #c0bfc4;
+    font-size: 14pt;
+}
+
+.to-do-list>.list-title>.list-month {
+    color: #c0bfc4;
+    font-size: 14pt;
+    padding: 10px 20px 0px 20px;
+}
+
+.do-list {
+    list-style: none;
+    margin: 0;
+    padding: 20px 20px 80px 20px;
+}
+
+.do-list>.task {
+    padding: 25px 0;
+    font-size: 16pt;
+    color: #959595;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.task>.text {
+    position: relative;
+}
+
+.task>.text::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    border-bottom: 2px solid #9f9f9f;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    transition: 0.3s;
+}
+
+.task.active>.text::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-bottom: 2px solid #9f9f9f;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
+
+.material-symbols-outlined.check {
+    display: none;
+}
+
+.toggle:hover {
+    cursor: pointer;
+    user-select: none;
+}

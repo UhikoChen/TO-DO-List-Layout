@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="main.css" />
+
+        <style>
+        .material-symbols-outlined.toggle{
+
+            font-size: 28pt;
+            color: #d5d5d5;
+
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+        }
+
+        .material-symbols-outlined.toggle.active {
+
+            font-size: 28pt;
+            color: #52d89d;
+
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+        }
+        </style>
+
+        <!-- icon -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>To Do List</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="to-do-list">
+                <div class="list-title">
+                    <div class="wrapper">
+                        <div class="list-date">Tuesday,31</div>
+                        <div class="task-count">6 Tasks</div>
+                    </div>
+                    <div class="list-month">August</div>
+                </div>
+                <div>
+                    <ul class="do-list">
+                        
+                        <li class="task">
+                            <span class="text">10 min Meditation</span>
+                            <span class="material-symbols-outlined toggle" onclick="OnCleanTask(this)">radio_button_unchecked</span>
+                        </li>
+
+                        <li class="task">
+                            <span class="text">Pack lunches</span>
+                            <span class="material-symbols-outlined toggle" onclick="OnCleanTask(this)">radio_button_unchecked</span>
+                        </li>
+
+                        <li class="task">
+                            <span class="text">Doctor's oppointment</span>
+                            <span class="material-symbols-outlined toggle" onclick="OnCleanTask(this)">radio_button_unchecked</span>
+                        </li>
+
+                        <li class="task">
+                            <span class="text">Zoom meeting with John</span>
+                            <span class="material-symbols-outlined toggle" onclick="OnCleanTask(this)">radio_button_unchecked</span>
+                        </li> 
+
+                        <li class="task">
+                            <span class="text">Begin QA for the product</span>
+                            <span class="material-symbols-outlined toggle" onclick="OnCleanTask(this)">radio_button_unchecked</span>
+                        </li>
+
+                        <li class="task">
+                            <span class="text">Go for a walk</span>
+                            <span class="material-symbols-outlined toggle" onclick="OnCleanTask(this)">radio_button_unchecked</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            function OnCleanTask(active){
+                
+                active.parentNode.classList.toggle("active");
+
+                if (active.classList.contains("active")){
+                    active.innerHTML = "radio_button_unchecked";
+                }
+                else{
+                    active.innerHTML = "check_circle";
+                }
+
+                active.classList.toggle("active");
+            }
+        </script>
+    </body>
+</html>
